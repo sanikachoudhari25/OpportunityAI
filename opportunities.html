@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Opportunities - OpportunityAI</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7ff;
+            color: #172033;
+        }
+
+        nav {
+            background: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4f46e5;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 45px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #4f46e5;
+        }
+
+        .search {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            width: 70%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .search button {
+            padding: 14px 20px;
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eeeeff;
+            color: #4f46e5;
+            padding: 7px 10px;
+            border-radius: 6px;
+            margin: 4px;
+            font-size: 13px;
+        }
+
+        .match {
+            color: #16805b;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .details {
+            margin-top: 20px;
+            color: #667085;
+        }
+
+        .view {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 18px;
+            background: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">✦ OpportunityAI</div>
+</nav>
+
+<div class="container">
+
+    <h1>Explore Opportunities 🚀</h1>
+
+    <p>Find internships, hackathons, scholarships and more.</p>
+
+    <div class="search">
+    <input type="text" id="searchInput" placeholder="🔎 Search opportunities...">
+</div>
+
+    <div class="cards">
+
+        <div class="card">
+            <span class="tag">Internship</span>
+
+            <h2>AI / ML Internship</h2>
+
+            <p>TechNova • Pune / Remote</p>
+
+            <p>
+                Work on machine learning models,
+                data preprocessing and AI projects.
+            </p>
+
+            <span class="tag">Python</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">SQL</span>
+
+            <div class="details">
+                ⏰ Deadline: 5 October 2026
+            </div>
+
+            <p class="match">🎯 {{ opportunities[0].match }}% Match</p>
+            <p>🤖 <b>Why this matches you?</b></p>
+            <p>✅ Matched Skills: {{ opportunities[0].matched_skills | join(", ") }}</p>
+<p>⚠️ Skill Gaps: {{ opportunities[0].missing_skills | join(", ") }}</p>
+
+            <a href="#" class="view"><a href="/apply/AI%20%2F%20ML%20Internship">
+    <button>🚀 Apply Now</button>
+</a></a>
+        </div>
+
+
+        <div class="card">
+            <span class="tag">Hackathon</span>
+
+            <h2>AI Innovation Hackathon</h2>
+
+            <p>Innovation Hub • Online</p>
+
+            <p>
+                Build an innovative AI solution
+                for a real-world problem.
+            </p>
+
+            <span class="tag">AI</span>
+            <span class="tag">Python</span>
+            <span class="tag">Innovation</span>
+
+            <div class="details">
+                ⏰ Deadline: 12 October 2026
+            </div>
+
+            <p class="match">🎯 {{ opportunities[1].match }}% Match</p>
+            <p>✅ Matched Skills: {{ opportunities[1].matched_skills | join(", ") }}</p>
+<p>⚠️ Skill Gaps: {{ opportunities[1].missing_skills | join(", ") }}</p>
+
+            <a href="#" class="view"><a href="/apply/AI%20Innovation%20Hackathon">
+    <button>🚀 Apply Now</button>
+</a></a>
+        </div>
+
+
+        <div class="card">
+            <span class="tag">Scholarship</span>
+
+            <h2>Women in AI Scholarship</h2>
+
+            <p>FutureAI Foundation • India</p>
+
+            <p>
+                Financial support for students
+                pursuing AI and technology.
+            </p>
+
+            <span class="tag">AI</span>
+            <span class="tag">Technology</span>
+
+            <div class="details">
+                ⏰ Deadline: 20 October 2026
+            </div>
+
+            <p class="match">🎯 {{ opportunities[2].match }}% Match</p>
+            <p>✅ Matched Skills: {{ opportunities[2].matched_skills | join(", ") }}</p>
+<p>⚠️ Skill Gaps: {{ opportunities[2].missing_skills | join(", ") }}</p>
+
+            <a href="#" class="view"><a href="/apply/Women%20in%20AI%20Scholarship">
+    <button>🚀 Apply Now</button>
+</a></a>
+        </div>
+
+
+        <div class="card">
+            <span class="tag">Course</span>
+
+            <h2>TensorFlow Certification</h2>
+
+            <p>LearnAI • Online</p>
+
+            <p>
+                Learn TensorFlow and deep learning
+                through a practical learning path.
+            </p>
+
+            <span class="tag">Python</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">Deep Learning</span>
+
+            <div class="details">
+                ⏰ Deadline: 30 October 2026
+            </div>
+
+            <p class="match">🎯 {{ opportunities[3].match }}% Match</p>
+            <p>✅ Matched Skills: {{ opportunities[3].matched_skills | join(", ") }}</p>
+<p>⚠️ Skill Gaps: {{ opportunities[3].missing_skills | join(", ") }}</p>
+
+            <a href="#" class="view"><a href="/apply/TensorFlow%20Certification">
+    <button>🚀 Apply Now</button>
+</a></a>
+        </div>
+
+    </div>
+
+</div>
+<script>
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".card");
+
+searchInput.addEventListener("input", function() {
+    const search = this.value.toLowerCase();
+
+    cards.forEach(card => {
+        if (card.innerText.toLowerCase().includes(search)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+</script>
+</body>
+</html>

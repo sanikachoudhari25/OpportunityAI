@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile - OpportunityAI</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7ff;
+            color: #172033;
+        }
+
+        nav {
+            background: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4f46e5;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            color: #4f46e5;
+        }
+
+        label {
+            display: block;
+            margin-top: 18px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 13px;
+            margin-top: 8px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: #4f46e5;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">✦ OpportunityAI</div>
+</nav>
+
+<div class="container">
+
+    <h1>Create Your Profile 👤</h1>
+
+    <p>Tell us about yourself so we can find opportunities for you.</p>
+
+    <form action="/save-profile" method="POST">
+
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="Enter your name">
+
+        <label>College Name</label>
+        <input type="text" name="college" placeholder="Enter your college">
+
+        <label>Education</label>
+        <select name="education">
+            <option>B.Tech</option>
+            <option>B.E.</option>
+            <option>B.Sc</option>
+            <option>BCA</option>
+            <option>M.Tech</option>
+            <option>Other</option>
+        </select>
+
+        <label>Branch</label>
+        <input type="text" name="branch" placeholder="e.g. AI & ML">
+
+        <label>Year</label>
+        <select name="year">
+            <option>1st Year</option>
+            <option>2nd Year</option>
+            <option>3rd Year</option>
+            <option>4th Year</option>
+        </select>
+
+        <label>Skills</label>
+       <input type="text" name="skills" placeholder="e.g. Python, Java, ML">
+
+        <label>Interests</label>
+        <input type="text" name="interests" placeholder="e.g. AI, Web Development">
+
+        <label>Preferred Location</label>
+        <input type="text" name="location" placeholder="e.g. Pune, Mumbai">
+
+        <button type="submit">
+            💾 Save My Profile 
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

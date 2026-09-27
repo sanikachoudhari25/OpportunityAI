@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application Tracker - OpportunityAI</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7ff;
+            margin: 0;
+        }
+
+        nav {
+            background: white;
+            padding: 20px 50px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4f46e5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #3730a3;
+        }
+
+        .application {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .status {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        .empty {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4f46e5;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    ✦ OpportunityAI
+</nav>
+
+<div class="container">
+
+    <h1>📋 My Application Tracker</h1>
+
+    <p>
+        Track the opportunities you have applied for.
+    </p>
+
+    {% if applications %}
+
+        {% for application in applications %}
+
+        <div class="application">
+
+            <h2>{{ application }}</h2>
+
+            <span class="status">
+                🟡 Applied
+            </span>
+
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="empty">
+
+            <h2>No applications yet 📭</h2>
+
+            <p>
+                Apply to an opportunity and it will appear here.
+            </p>
+
+            <a href="/opportunities">
+                ← Explore Opportunities
+            </a>
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
